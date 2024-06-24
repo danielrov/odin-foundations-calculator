@@ -3,6 +3,8 @@ const numbers = document.querySelectorAll(".number")
 const opeators = document.querySelectorAll(".operation")
 const calculate = document.querySelector(".equal")
 const clear = document.querySelector(".clear")
+const symbol = document.querySelector(".symbol")
+const percentage = document.querySelector(".percentage")
 let firstNumber = 0
 let secondNumber = 0
 let operation = 0
@@ -50,6 +52,25 @@ calculate.addEventListener("click", function() {
     operate(firstNumber,secondNumber,operation);
 });
 
+percentage.addEventListener("click", function() {
+    const toPercentage = (parseFloat(values.join(""))) / 100;
+    display.innerHTML = "";
+    addToDisplay(toPercentage);
+    values = [+toPercentage]
+});
+
+symbol.addEventListener("click", function() {
+    let changeSymbol = (parseFloat(values.join("")));
+    if (changeSymbol > 0) {
+        changeSymbol = changeSymbol * -1;
+    } else {
+        changeSymbol = changeSymbol * -1;
+    }
+    display.innerHTML = "";
+    addToDisplay(changeSymbol);
+    values = [+changeSymbol]
+})
+
 function addToDisplay(textToAdd) {
     const text = document.createTextNode(textToAdd);
     display.appendChild(text);
@@ -57,28 +78,36 @@ function addToDisplay(textToAdd) {
 
 const add = function(a,b) {
     result = +a + +b;
-    result = result.toFixed(2);
+    if (isFloat(result)) {
+        result = result.toFixed(2);
+    };
     values = [+result];
 	addToDisplay(result);
 };
 
 const subtract = function(a,b) {
 	result = +a - +b;
-    result = result.toFixed(2);
+    if (isFloat(result)) {
+        result = result.toFixed(2);
+    };
     values = [+result];
 	addToDisplay(result);
 };
 
 const multiply = function(a,b) {
     result = +a * +b;
-    result = result.toFixed(2);
+    if (isFloat(result)) {
+        result = result.toFixed(2);
+    };
     values = [+result];
 	addToDisplay(result);
 };
 
 const divide = function (a,b) {
     result = +a / +b;
-    result = result.toFixed(2);
+    if (isFloat(result)) {
+        result = result.toFixed(2);
+    };
     values = [+result];
 	addToDisplay(result);
 }
@@ -99,3 +128,7 @@ function operate(firstNumber, secondNumber, operator) {
     secondNumber = 0;
     operation = "";
 }
+
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+  }
