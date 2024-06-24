@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+li {
+    list-style-type: none;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+  }
+
+.calculator {
+    background-color: black;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.display {
+    color: white;
+    display: flex;
+    justify-content: end;
+    font-size: 50px;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+}
+
+.first {
+    justify-content: space-between;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 0px;
+    font-size: 25px;
+}
+
+.number {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.number:active {
+    background-color: white;
+    color: rgb(51, 51, 51);
+}
+
+.operation {
+    background-color: rgb(255, 159, 36);
+    color: white;
+}
+
+.operation:active {
+    background-color: white;
+    color:  rgb(255, 159, 36);
+}
+
+.clear,
+.equal {
+    background-color: rgb(165, 165, 165);
+}
+
+.clear:active,
+.equal:active {
+    background-color: white;
+}
+
+.cero {
+    flex-grow: 1;
+    border-radius: 32px;
+    text-align: start;
+    padding-left: 24px;
+}
