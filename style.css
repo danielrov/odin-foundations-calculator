@@ -16,6 +16,7 @@ li {
     justify-content: center;
     align-items: center;
     font-family: "Inter", sans-serif;
+    background-color: #F5F5F0;
   }
 
 .calculator {
@@ -81,12 +82,16 @@ li {
 }
 
 .clear,
-.equal {
+.equal,
+.symbol,
+.percentage {
     background-color: rgb(165, 165, 165);
 }
 
 .clear:active,
-.equal:active {
+.equal:active,
+.symbol:active,
+.percentage:active {
     background-color: white;
 }
 
