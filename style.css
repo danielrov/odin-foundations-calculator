@@ -48,10 +48,6 @@ li {
     gap: 8px;
 }
 
-.first {
-    justify-content: space-between;
-}
-
 .btn {
     height: 60px;
     width: 60px;

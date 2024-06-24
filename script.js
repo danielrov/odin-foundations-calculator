@@ -47,24 +47,28 @@ function addToDisplay(textToAdd) {
 
 const add = function(a,b) {
     result = +a + +b;
-    values = [result]
+    result = result.toFixed(2);
+    values = [result];
 	addToDisplay(result);
 };
 
 const subtract = function(a,b) {
 	result = +a - +b;
-    values = [result]
+    result = result.toFixed(2);
+    values = [result];
 	addToDisplay(result);
 };
 
 const multiply = function(a,b) {
     result = +a * +b;
-    values = [result]
+    result = result.toFixed(2);
+    values = [result];
 	addToDisplay(result);
 };
 
 const divide = function (a,b) {
     result = +a / +b;
+    result = result.toFixed(2);
     values = [result];
 	addToDisplay(result);
 }
